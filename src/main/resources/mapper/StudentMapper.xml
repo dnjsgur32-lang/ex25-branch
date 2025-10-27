@@ -7,24 +7,24 @@
     <select id="findAll" resultType="Student">
         SELECT * FROM student ORDER BY id DESC
     </select>
-    <!--    단건 조회-->
-    <select id="findById" parameterType="long" resultType="Student">
-        SELECT * FROM student WHERE id = #{id}
-    </select>
-    <!--    학생 추가-->
-    <insert id="insert" parameterType="Student" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO student(NAME, email, age)
-        VALUES (#{name}, #{email}, #{age})
-    </insert>
-    <!--    정보 수정-->
-    <update id="update" parameterType="Student">
-        UPDATE student
-        SET name = #{name}, email = #{email}, age = #{age}
-        WHERE id = #{id}
-    </update>
-    <!--    정보 삭제-->
-    <delete id="delete" parameterType="long">
-        DELETE FROM student
-        WHERE id = #{id}
-    </delete>
+<!--    &lt;!&ndash;    단건 조회&ndash;&gt;-->
+<!--    <select id="findById" parameterType="long" resultType="Student">-->
+<!--        SELECT * FROM student WHERE id = #{id}-->
+<!--    </select>-->
+<!--    &lt;!&ndash;    학생 추가&ndash;&gt;-->
+<!--    <insert id="insert" parameterType="Student" useGeneratedKeys="true" keyProperty="id">-->
+<!--        INSERT INTO student(NAME, email, age)-->
+<!--        VALUES (#{name}, #{email}, #{age})-->
+<!--    </insert>-->
+<!--    &lt;!&ndash;    정보 수정&ndash;&gt;-->
+<!--    <update id="update" parameterType="Student">-->
+<!--        UPDATE student-->
+<!--        SET name = #{name}, email = #{email}, age = #{age}-->
+<!--        WHERE id = #{id}-->
+<!--    </update>-->
+<!--    &lt;!&ndash;    정보 삭제&ndash;&gt;-->
+<!--    <delete id="delete" parameterType="long">-->
+<!--        DELETE FROM student-->
+<!--        WHERE id = #{id}-->
+<!--    </delete>-->
 </mapper>
