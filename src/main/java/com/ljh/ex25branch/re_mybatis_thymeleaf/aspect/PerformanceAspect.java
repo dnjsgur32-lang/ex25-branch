@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PerformanceAspect {
 
-    @Around("execution(* com.ljh.ex25branch.re_mybatis_thymeleaf.aspect.service.*.*(..))")
+    @Around("execution(* com.ljh.ex25branch.re_mybatis_thymeleaf.service.*.*(..))")
     public Object measureTime(ProceedingJoinPoint pjp) throws Throwable {
 
         long start = System.currentTimeMillis();

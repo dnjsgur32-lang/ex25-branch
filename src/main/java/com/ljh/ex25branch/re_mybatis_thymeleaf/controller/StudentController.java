@@ -38,6 +38,13 @@ public class StudentController {
         return "student/form";
     }
 
+    @PostMapping
+    public String create(@ModelAttribute("student") Student student) {
+        studentService.createStudent(student);
+        return "redirect:/students";
+    }
+
+
     //    FORM: 수정하기 버튼 클릭후
     //    http://localhost:8081/students/13/edit >> http://localhost:8081/students
     @PostMapping("/{id}")

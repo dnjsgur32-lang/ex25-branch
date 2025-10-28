@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspect {
 
-    @Before("execution(* com.ljh.ex25branch.re_mybatis_thymeleaf.aspect.service.*.*(..))")
+    @Before("execution(* com.ljh.ex25branch.re_mybatis_thymeleaf.service.*.*(..))")
     public void logBefore(JoinPoint jp) {
         log.info("MMMMMMM 메서드 실행전: {} MMMMM", jp.getSignature());
     }
